@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+import ejercicio.Funcionario;
+
+public class Controlador {
+
+	public static void main(String[] args) {
+
+		Scanner lector = new Scanner(System.in);
+		
+		Autos auto1 = new Autos(null, null, 0, 0);
+		
+		System.out.println("ingresa la marca del auto: ");
+		String m = lector.nextLine();
+		System.out.println("Ingresa la matricula de tu auto: ");
+		String M = lector.nextLine();
+		System.out.println("Ingresa cuantas puertas tiene tu auto: ");
+		int p = lector.nextInt();
+		System.out.println("Ingresa cuantas ventanas tiene tu auto: ");
+		int v = lector.nextInt();
+		
+		auto1.setMarca(m);
+		auto1.setMatricula(M);
+		auto1.setPuertas(p);
+		auto1.setVentanas(v);
+		
+		System.out.println("La marca es:" + auto1.getMarca() + ", la matricula es:" + auto1.getMatricula() + ", tiene un total de puertas de:" + auto1.getPuertas() + ", tiene un total de Ventanas: " + auto1.getVentanas());
+	}
+
+}
